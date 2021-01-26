@@ -44,6 +44,11 @@ public class WaterBottleTest {
 
     @Test
     public void canFill() {
+        // empty the bottle and check that it is empty
+        waterBottle.empty();
+        assertEquals(0, waterBottle.getVolume());
+
+        // fill the bottle and confirm that it has been filled
         waterBottle.fill();
         assertEquals(100, waterBottle.getVolume());
     }
